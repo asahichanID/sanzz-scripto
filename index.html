@@ -106,8 +106,8 @@
 
 <div class="container">
   <h1>COMING SOON</h1>
-  <p>Selamat datang di grup <span id="groupName">futuristik ini</span>!</p>
-  <a class="btn-contact" href="https://wa.me/628XXXXXXX2" target="_blank">Contact 👊</a>
+  <p>Selamat datang di grup <span id="Zenlesscore">futuristik ini</span>!</p>
+  <a class="btn-contact" href="https://wa.me/6281563808289" target="_blank">Contact me</a>
 </div>
 
 <script>
@@ -147,9 +147,16 @@
   }
   animate();
 
-  // Auto set group name dari title document (bisa diganti sesuai API)
-  const groupName = document.getElementById('groupName');
-  groupName.textContent = document.title.split(" - ")[0] || "futuristik ini";
+  <script>
+  const groupLink = "https://chat.whatsapp.com/GGM62CW6NOj5tN9B0wtLkV?mode=ems_copy_t";
+  let txt = `🚀 Selamat datang di zenless core • ${groupLink} `;
+  let i = 0;
+  function animTitle() {
+    document.title = txt.substring(i) + txt.substring(0,i);
+    i = (i + 1) % txt.length;
+    setTimeout(animTitle, 200);
+  }
+  animTitle();
 </script>
 
 </body>
